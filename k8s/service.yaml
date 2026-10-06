@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: gitops-nginx-service
+
+spec:
+  type: LoadBalancer
+
+  selector:
+    app: gitops-nginx
+
+  ports:
+    - port: 80
+      targetPort: 80
